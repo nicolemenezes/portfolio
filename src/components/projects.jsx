@@ -42,7 +42,7 @@ const Projects = () => {
       image: gigcampusImg,
       githubUrl: 'https://github.com/cyril-giri/BitNBuild-25_Recursion', // Add your GitHub link here later
       liveUrl: 'https://bit-n-build-25-recursion.vercel.app/', // Deployed link
-      tags: ['React', 'Next.js', 'MongoDB', 'Tailwind'], // ✅ FIXED: Added tags
+      tags: ['React', 'Supabase'], // ✅ FIXED: Added tags
       gradient: 'from-purple-500/20 to-blue-500/20',
     },
   ];
