@@ -6,6 +6,7 @@ import { useState } from 'react';
 // add imports for local images
 import sentimentImg from '../assets/sentiment.png';
 import gigcampusImg from '../assets/gigcampus.png';
+import dashboardImg from '../assets/dashboard.png';
 
 const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -27,7 +28,7 @@ const Projects = () => {
       name: 'Admin Dashboard',
       description:
         'A comprehensive admin dashboard with data visualization, user management, and analytics for business intelligence.',
-      image: 'https://via.placeholder.com/600x400/1e293b/06b6d4?text=Admin+Dashboard', // Replace with actual screenshot
+      image: dashboardImg, // uses src/assets/dashboard.png
       githubUrl: 'https://github.com/nicolemenezes/admin-dashboard',
       liveUrl: '', // Add your deployed link here later
       tags: ['React', 'Node.js', 'MongoDB', 'Express.js'],
