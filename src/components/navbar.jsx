@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
 import { useTheme } from './themeprovider';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
+    { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -43,7 +43,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/80 dark:bg-slate-800/80 backdrop-blur-md rounded-full px-6 py-3 shadow-2xl border border-slate-700/50">
+    <nav
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-md rounded-full px-6 py-3 shadow-2xl border"
+      style={{
+        backgroundColor: theme === 'dark' ? 'rgba(15, 23, 42, 0.8)' : 'rgba(255, 255, 255, 0.8)',
+        borderColor: theme === 'dark' ? 'rgba(71, 85, 105, 0.5)' : 'rgba(203, 213, 225, 0.5)'
+      }}
+    >
       <div className="flex items-center gap-6">
         {navItems.map((item) => (
           <button
@@ -52,23 +58,12 @@ const Navbar = () => {
             className={`text-sm font-medium transition-all duration-300 hover:text-blue-400 ${
               activeSection === item.id
                 ? 'text-blue-400 scale-110'
-                : 'text-slate-300'
+                : theme === 'dark' ? 'text-slate-300' : 'text-slate-700'
             }`}
           >
             {item.label}
           </button>
         ))}
-        
-        <button
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className="ml-2 p-2 rounded-full hover:bg-slate-700/50 transition-colors"
-        >
-          {theme === 'dark' ? (
-            <Sun className="h-5 w-5 text-yellow-400" />
-          ) : (
-            <Moon className="h-5 w-5 text-slate-700" />
-          )}
-        </button>
       </div>
     </nav>
   );

@@ -17,15 +17,23 @@ export function ThemeProvider({
 
   useEffect(() => {
     const root = window.document.documentElement;
+    
+    // Remove both classes first
     root.classList.remove('light', 'dark');
-    root.classList.add(theme);
+    
+    // Add the current theme class
+    if (theme === 'light') {
+      root.classList.add('light');
+    }
+    // For dark mode, we don't need to add 'dark' class since :root is default
+    
   }, [theme]);
 
   const value = {
     theme,
-    setTheme: (theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
+    setTheme: (newTheme) => {
+      localStorage.setItem(storageKey, newTheme);
+      setTheme(newTheme);
     },
   };
 

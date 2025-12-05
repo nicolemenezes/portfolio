@@ -3,6 +3,10 @@ import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+// add imports for local images
+import sentimentImg from '../assets/sentiment.png';
+import gigcampusImg from '../assets/gigcampus.png';
+
 const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -12,10 +16,10 @@ const Projects = () => {
       name: 'Sentiment Analyzer',
       description:
         'An intelligent sentiment analysis tool that processes text and determines emotional tone using natural language processing.',
-      image: 'https://via.placeholder.com/600x400/1e293b/3b82f6?text=Sentiment+Analyzer', // Replace with actual screenshot
+      image: sentimentImg,
       githubUrl: 'https://github.com/nicolemenezes/sentiment-analyzer',
       liveUrl: '', // Add your deployed link here later
-      tags: ['Python', 'NLP', 'Machine Learning'],
+      tags: ['Python', 'NLP', 'Machine Learning', 'FastAPI'],
       gradient: 'from-blue-500/20 to-cyan-500/20',
     },
     {
@@ -26,7 +30,7 @@ const Projects = () => {
       image: 'https://via.placeholder.com/600x400/1e293b/06b6d4?text=Admin+Dashboard', // Replace with actual screenshot
       githubUrl: 'https://github.com/nicolemenezes/admin-dashboard',
       liveUrl: '', // Add your deployed link here later
-      tags: ['React', 'Node.js', 'MongoDB'],
+      tags: ['React', 'Node.js', 'MongoDB', 'Express.js'],
       gradient: 'from-cyan-500/20 to-blue-500/20',
     },
     {
@@ -34,10 +38,10 @@ const Projects = () => {
       name: 'GigCampus',
       description:
         'A platform connecting students with freelance opportunities and gig work tailored for campus communities.',
-      image: 'https://via.placeholder.com/600x400/1e293b/8b5cf6?text=GigCampus', // Replace with actual screenshot
-      githubUrl: '', // Add your GitHub link here later
-      liveUrl: '', // Add your deployed link here later
-      tags: ['Full Stack', 'React', 'Express'],
+      image: gigcampusImg,
+      githubUrl: 'https://github.com/cyril-giri/BitNBuild-25_Recursion', // Add your GitHub link here later
+      liveUrl: 'https://bit-n-build-25-recursion.vercel.app/', // Deployed link
+      tags: ['React', 'Next.js', 'MongoDB', 'Tailwind'], // ✅ FIXED: Added tags
       gradient: 'from-purple-500/20 to-blue-500/20',
     },
   ];
@@ -95,10 +99,6 @@ const Projects = () => {
                         alt={project.name}
                         className="relative rounded-2xl border border-slate-600/50 w-full h-auto shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
                       />
-                      {/* Replace placeholder comment */}
-                      <div className="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-slate-400 border border-slate-700">
-                        Replace with actual screenshot
-                      </div>
                     </div>
                   </div>
 
@@ -207,7 +207,7 @@ const Projects = () => {
                     {/* Instructions for updating links */}
                     {(!project.liveUrl || !project.githubUrl) && (
                       <p className="text-xs text-slate-500 italic">
-                        Update links in /src/components/Projects.jsx
+                        
                       </p>
                     )}
                   </div>
