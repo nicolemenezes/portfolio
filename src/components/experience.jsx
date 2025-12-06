@@ -14,10 +14,10 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#F0F0F0] mb-4">
             Experience
           </h2>
-          <p className="text-slate-400 text-lg">Leadership & contributions</p>
+          <p className="text-[#F0F0F0]/70 text-lg">Leadership & contributions</p>
         </motion.div>
 
         <motion.div
@@ -50,7 +50,7 @@ const Experience = () => {
                   <CardItem translateZ={50}>
                     <div>
                       <h3 className="text-3xl md:text-4xl font-bold text-slate-100 mb-2">
-                        PR Manager(TEDxCRCE)
+                        PR Manager (TEDxCRCE)
                       </h3>
                       <div className="flex items-center space-x-2 text-slate-400 mb-4">
                         <Calendar className="h-5 w-5 text-red-400" />

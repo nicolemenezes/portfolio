@@ -21,7 +21,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/nicolemenezes/sentiment-analyzer',
       liveUrl: '', // Add your deployed link here later
       tags: ['Python', 'NLP', 'Machine Learning', 'FastAPI'],
-      gradient: 'from-blue-500/20 to-cyan-500/20',
+      gradient: 'from-[#004D61]/10 to-[#3E5841]/10',
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/nicolemenezes/admin-dashboard',
       liveUrl: '', // Add your deployed link here later
       tags: ['React', 'Node.js', 'MongoDB', 'Express.js'],
-      gradient: 'from-cyan-500/20 to-blue-500/20',
+      gradient: 'from-[#922659]/10 to-[#004D61]/10',
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const Projects = () => {
       githubUrl: 'https://github.com/cyril-giri/BitNBuild-25_Recursion', // Add your GitHub link here later
       liveUrl: 'https://bit-n-build-25-recursion.vercel.app/', // Deployed link
       tags: ['React', 'Supabase'], // ✅ FIXED: Added tags
-      gradient: 'from-purple-500/20 to-blue-500/20',
+      gradient: 'from-[#3E5841]/10 to-[#922659]/10',
     },
   ];
 
@@ -57,10 +57,10 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
-            Featured Projects
+          <h2 className="text-4xl md:text-5xl font-bold text-[#F0F0F0] mb-4">
+            Featured <span className="text-[#004D61]">Projects</span>
           </h2>
-          <p className="text-slate-400 text-lg">
+          <p className="text-[#F0F0F0]/70 text-lg">
             Building solutions that make a difference
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ const Projects = () => {
                   {/* Project Image */}
                   <div className="order-2 md:order-1">
                     <div className="relative group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#004D61] to-[#3E5841] rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                       <img
                         src={project.image}
                         alt={project.name}
@@ -107,7 +107,7 @@ const Projects = () => {
                   <div className="order-1 md:order-2 flex flex-col justify-center space-y-6">
                     <div>
                       <motion.h3
-                        className="text-3xl md:text-4xl font-bold text-slate-100 mb-4"
+                        className="text-3xl md:text-4xl font-bold text-[#F0F0F0] mb-4"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -116,7 +116,7 @@ const Projects = () => {
                         {project.name}
                       </motion.h3>
                       <motion.p
-                        className="text-slate-300 text-lg leading-relaxed"
+                        className="text-[#F0F0F0]/80 text-lg leading-relaxed"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -137,7 +137,7 @@ const Projects = () => {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-4 py-2 bg-slate-800/80 backdrop-blur-sm rounded-full text-sm font-medium text-blue-400 border border-blue-500/30"
+                          className="px-4 py-2 bg-[#2A2A2A] rounded-full text-sm font-medium text-[#F0F0F0] border border-[#004D61]/30"
                         >
                           {tag}
                         </span>
@@ -160,7 +160,7 @@ const Projects = () => {
                         >
                           <Button
                             size="lg"
-                            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 border-0 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
+                            className="bg-[#004D61] hover:bg-[#006B85] text-[#F0F0F0] border-0 shadow-lg hover:shadow-xl transition-all duration-300"
                           >
                             <ExternalLink className="mr-2 h-5 w-5" />
                             Live Demo
@@ -186,7 +186,7 @@ const Projects = () => {
                           <Button
                             size="lg"
                             variant="outline"
-                            className="border-slate-600 hover:border-blue-500 hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300"
+                            className="border-[#3A3A3A] text-[#F0F0F0] hover:border-[#004D61] hover:bg-[#004D61]/10 transition-all duration-300"
                           >
                             <Github className="mr-2 h-5 w-5" />
                             View Code
@@ -204,18 +204,11 @@ const Projects = () => {
                         </Button>
                       )}
                     </motion.div>
-
-                    {/* Instructions for updating links */}
-                    {(!project.liveUrl || !project.githubUrl) && (
-                      <p className="text-xs text-slate-500 italic">
-                        
-                      </p>
-                    )}
                   </div>
                 </div>
 
                 {/* 3D Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-500/5 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#004D61]/5 pointer-events-none"></div>
               </motion.div>
             </motion.div>
           ))}

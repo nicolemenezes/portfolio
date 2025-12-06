@@ -14,31 +14,26 @@ const Certifications = () => {
   const certifications = [
     {
       title: 'BitNBuild Hackathon Participant-2024',
-     
       image: cert24,
       link: '#',
     },
     {
       title: 'Advanced React By Meta',
-      
       image: reactImg,
       link: '#',
     },
     {
       title: 'AWS Cloud Architecting',
-      
       image: awsImg,
       link: '#',
     },
     {
       title: 'Python And Machine Learning(ISRO)',
-     
       image: isroImg,
       link: '#',
     },
     {
       title: 'BitNBuild Finalist 2025',
-      
       image: bnbFinals,
       link: '#',
     },
@@ -60,13 +55,12 @@ const Certifications = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Award className="h-10 w-10 text-yellow-400" />
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#F0F0F0]">
               Certifications
             </h2>
           </div>
-          <p className="text-slate-400 text-lg">
-           
+          <p className="text-[#F0F0F0]/70 text-lg">
+            Continuous learning and professional development
           </p>
         </motion.div>
 
@@ -81,7 +75,7 @@ const Certifications = () => {
             {certifications.map((cert, index) => (
               <CarouselItem key={index}>
                 <div className="p-4">
-                  <div className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 overflow-hidden hover:border-yellow-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/20 hover:scale-105">
+                  <div className="group relative bg-[#2A2A2A] backdrop-blur-sm rounded-2xl border border-[#3A3A3A] overflow-hidden hover:border-[#004D61] transition-all duration-300 hover:shadow-2xl hover:shadow-[#004D61]/20 hover:scale-105">
                     {/* Certificate Image */}
                     <div className="relative aspect-[4/3] overflow-hidden bg-slate-900">
                       <img
@@ -99,7 +93,6 @@ const Certifications = () => {
                             className="flex items-center gap-2 px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-slate-900 rounded-full font-semibold transition-colors"
                           >
                             <ExternalLink className="h-4 w-4" />
-                            
                           </a>
                         )}
                       </div>
@@ -121,7 +114,6 @@ const Certifications = () => {
                       <div className="pt-2">
                         <span className="inline-flex items-center gap-1 px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-xs font-medium text-yellow-400">
                           <Award className="h-3 w-3" />
-                          
                         </span>
                       </div>
                     </div>

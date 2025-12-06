@@ -33,12 +33,12 @@ const Contact = () => {
             href="https://www.linkedin.com/in/nicole-menezes-525481314/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 rounded-lg bg-zinc-800/50 hover:bg-zinc-800 transition-all duration-300 group"
+            className="flex items-center gap-4 p-4 rounded-lg bg-[#1E1E1E] hover:bg-[#004D61]/20 transition-all duration-300 group"
           >
-            <div className="p-2 bg-zinc-700 rounded-lg group-hover:bg-blue-600 transition-colors duration-300">
+            <div className="p-2 bg-[#2A2A2A] rounded-lg group-hover:bg-[#004D61] transition-colors duration-300">
               <Linkedin className="h-6 w-6 text-white" />
             </div>
-            <span className="text-gray-300 text-lg font-medium group-hover:text-white transition-colors">
+            <span className="text-[#F0F0F0]/80 text-lg font-medium group-hover:text-[#F0F0F0] transition-colors">
               LinkedIn
             </span>
           </a>
@@ -48,12 +48,12 @@ const Contact = () => {
             href="https://github.com/nicolemenezes"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 rounded-lg bg-zinc-800/50 hover:bg-zinc-800 transition-all duration-300 group"
+            className="flex items-center gap-4 p-4 rounded-lg bg-[#1E1E1E] hover:bg-[#004D61]/20 transition-all duration-300 group"
           >
-            <div className="p-2 bg-zinc-700 rounded-lg group-hover:bg-purple-600 transition-colors duration-300">
+            <div className="p-2 bg-[#2A2A2A] rounded-lg group-hover:bg-[#004D61] transition-colors duration-300">
               <Github className="h-6 w-6 text-white" />
             </div>
-            <span className="text-gray-300 text-lg font-medium group-hover:text-white transition-colors">
+            <span className="text-[#F0F0F0]/80 text-lg font-medium group-hover:text-[#F0F0F0] transition-colors">
               GitHub
             </span>
           </a>
